@@ -1,1 +1,22 @@
-<h1>Home Page</h1>
+{%  extends "mel_site/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+
+<div class="">
+    <div class="background-img flex-center ">
+        <h1 class="display-1">MELISSA | <i>LOTHOLZ</i></h1>
+        <h2 class="display-3">SLEIGH <i>all</i> DAY</h2>
+    
+    </div>
+
+</div>
+
+
+
+{% endblock %}
+
+{% block script %}
+<link href="{% static 'mel_site/home_styles.css' %}" rel="stylesheet">
+{% endblock %}
