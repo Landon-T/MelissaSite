@@ -1,5 +1,8 @@
 
-
+.title{
+    margin-top: 50px;
+    text-align: center;
+}
 
 .image-container{
     display: flex;
@@ -12,20 +15,43 @@
     margin: 10px;
     padding: 5px;
     min-width: 250px;
+    max-width: 90vw;
 }
 
 .picture{
-    max-width: 30%;
+    max-width: 260px;
     height: auto;
     margin: 25px;
-    padding: 10px;
-    background: lightgray;
+    padding: 15px;
+    background: white;
     font-style: italic;
     font-size: small;
-    border-radius: 5px;
+    text-align: right;
+    
+    
+}
+
+.rotate-left{
+
+    transform: rotate(-9deg);
+}
+.rotate-right{
+
+    transform: rotate(9deg);
+}
+
+.text{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
 }
 
 img{
     
-    border-radius: 10px;
+    max-width: 250px;
+
+    border-radius: 15px;
 }
