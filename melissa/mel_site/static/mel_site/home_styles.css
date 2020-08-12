@@ -11,17 +11,41 @@
     linear-gradient(
       rgba(0, 0, 0, 0.75),
       rgba(0, 0, 0, 0.75)
-    ),
-    url('/static/mel_site/home_background.jpg');
+    );
     background-size: cover;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     color: white;
-    background-position: 50% 50%
+    
     
 }
 
+a.carousel-control-next:hover {
+    background-image: linear-gradient(to right, rgba(250, 0, 0, 0) 0px, rgba(0, 0, 0, 0.5) 100%);
+}
+
+a.carousel-control-prev:hover{
+    background-image: linear-gradient(to left, rgba(250, 0, 0, 0) 0px,  rgba(0, 0, 0, 0.5) 100%);
+   }
+
+
 html, body{
     height: 100%;
+}
+
+.carousel{
+    max-height: 90vh;
+    max-width: 75vw;
+    margin: auto;
+}
+
+.carousel-inner img{
+    max-height: 90vh;
+    max-width: 90vw;
+    margin: auto;
+
+    
+
 }
 
 
