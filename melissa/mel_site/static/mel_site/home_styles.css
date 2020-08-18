@@ -26,8 +26,12 @@ a.carousel-control-next:hover {
 
 a.carousel-control-prev:hover{
     background-image: linear-gradient(to left, rgba(250, 0, 0, 0) 0px,  rgba(0, 0, 0, 0.5) 100%);
-   }
+}
 
+
+.space{
+    padding: 100px;
+}
 
 html, body{
     height: 100%;
