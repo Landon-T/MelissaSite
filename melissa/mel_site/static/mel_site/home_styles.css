@@ -33,6 +33,18 @@ a.carousel-control-prev:hover{
     padding: 100px;
 }
 
+
+.award-item{
+    min-width: 175px;
+    margin: 25px;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: inherit;
+  }
+
 html, body{
     height: 100%;
 }
