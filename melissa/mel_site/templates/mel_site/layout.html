@@ -13,7 +13,7 @@
         {% block script %}
         {% endblock %}
     </head>
-    <body>
+    <body class="d-flex flex-column shrink-0">
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
             <a class="navbar-brand" href="{% url 'index' %}">MELISSA | <i>LOTHOLZ</i></a>
@@ -27,21 +27,17 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'meet' %}">Meet Melissa</a>
                 </li>
-                
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Bobsleigh 101</a>
+                    <a class="nav-link" href="{% url 'speak' %}">Speaking & Events</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Speaking & Events</a>
+                    <a class="nav-link" href="{% url 'involved' %}">Get Involved</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Join The Community</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Invest In The Journey</a>
+                    <a class="nav-link" href="{% url 'store' %}">Store</a>
                 </li>
 
               </ul>
@@ -53,9 +49,10 @@
             {% endblock %}
         </div>
 
-        <footer>
-          <p>Created by: Landon Thys</p>
-          <p>lthys@ualberta.ca</p>
+        <footer class="footer mt-auto py-3">
+          <div class="container">
+            <span class="text-muted">Created by Landon Thys</span>
+          </div>
         </footer>
     </body>
 </html>

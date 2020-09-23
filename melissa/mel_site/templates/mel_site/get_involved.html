@@ -1,0 +1,22 @@
+{%  extends "mel_site/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+
+<div class="title">
+
+    <h1 class="display-1">GET INVOLVED</h1>
+</div>
+
+
+<div class="container">
+    {{content | safe}}
+</div>
+    
+
+{% endblock %}
+
+{% block script %}
+<link href="{% static 'mel_site/meet_styles.css' %}" rel="stylesheet">
+{% endblock %}
