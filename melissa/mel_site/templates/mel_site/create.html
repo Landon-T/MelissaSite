@@ -4,30 +4,55 @@
 {% block body %}
 
 
-<h1>Create New Section</h1>
-
-<form action="{% url 'create' %}" method="post">
-    {% csrf_token %}
-    <div class="flex-item">
-        <div>{{form.title.label_tag}}</div>
-        <div>{{form.title}}</textarea></div>
-        {{form.title.errors}}
-    </div>
-    <div class="flex-item">
-        <div>{{form.body.label_tag}}</div>
-        <div>{{form.body}}</textarea></div>
-        {{form.body.errors}}
-    </div>
-
-    <input  type="submit" value="Create Section">
-   
 
 
-</form>
+
+<div class="container text-center">
+    
+
+
+    {% for page in pages %}
+    <li><a href="{% url 'edit' page %}">{{page}}</a> </li>
+    {% endfor %}
+    
+    
+    {% if title != None %}
+    <h1>Edit {{title}}</h1>
+    {% else %}
+    <h1>Edit Section</h1>
+    {% endif %}
+
+    
+
+
+    
+
+    
+    <form action="{% url 'create' %}" method="post">
+        {% csrf_token %}
+        <div class="flex-item">
+            <div>{{form.title.label_tag}}</div>
+            <div>{{form.title}}</textarea></div>
+            {{form.title.errors}}
+        </div>
+        <div class="flex-item">
+            <div>{{form.body.label_tag}}</div>
+            <div>{{form.body}}</textarea></div>
+            {{form.body.errors}}
+        </div>
+    
+        <input  type="submit" value="Create Section">
+       
+    
+    
+    </form>
+</div>
+
 
 
 {% endblock %}
 
 {% block script %}
 <link href="{% static 'mel_site/home_styles.css' %}" rel="stylesheet">
+
 {% endblock %}
