@@ -7,7 +7,7 @@
 
 HAHAHHA LANDON IS FUNNY
 
-Does thios work over here!
+Running in gunicorn
 
 
 bfhriqgbg uyrbeqiugbreuiqbgyirehqlbgreuiqbgriueqbgirepqbgiure

@@ -16,7 +16,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 
-# Quick-start development settings - unsuitable for production
+# Quick-start develolspment settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -25,7 +25,12 @@ SECRET_KEY = 'dno4_e52rw#lrmbm+n(pplgr=%%jvlmz7h)@h(j&b327)4q$pt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+
+# The simplest case: just add the domain name(s) and IP addresses of your Django server
+# ALLOWED_HOSTS = [ 'example.com', '203.0.113.5']
+# To respond to 'example.com' and any subdomains, start the domain with a dot
+# ALLOWED_HOSTS = ['.example.com', '203.0.113.5']
+ALLOWED_HOSTS = ['0.0.0.0', '50.99.245.12']
 
 
 # Application definition
@@ -119,3 +124,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = BASE_DIR / 'static'

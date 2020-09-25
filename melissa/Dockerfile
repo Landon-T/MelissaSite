@@ -3,7 +3,6 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
 WORKDIR /code
 COPY requirements.txt /code/
-
 RUN pip3 install -r requirements.txt
 # Installing uwsgi server
 RUN pip3 install uwsgi
@@ -11,7 +10,8 @@ COPY . /code/
 
 EXPOSE 8000
 # This is not the best way to DO, SEE BELOW!!
-CMD uwsgi --http "0.0.0.0:8000" --module melissa.wsgi
+#CMD uwsgi --http "0.0.0.0:8000" --module melissa.wsgi
+CMD gunicorn melissa.wsgi:application --bind 0.0.0.0:8000 --workers 2
 #CMD uwsgi --http :9090 --wsgi-file melissa/wsgi.py
 #CMD uwsgi --chdir=/melissa \
 #      --module=melissa.wsgi:application \
@@ -33,3 +33,7 @@ CMD uwsgi --http "0.0.0.0:8000" --module melissa.wsgi
 #     # optional path to a virtual environment
 #     #--daemonize=/var/log/uwsgi/yourproject.log      
 #     # background the process
+
+
+#https://medium.com/@adamsokode/deploying-django-app-inside-container-running-apache-mod-wsgi-73831aa04724
+#https://www.youtube.com/watch?v=OtZmCBR7J-k
