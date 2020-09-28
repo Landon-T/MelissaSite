@@ -1,0 +1,16 @@
+https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html
+
+gunicorn melissa.wsgi
+
+
+sudo apt-get install nginx
+sudo /etc/init.d/nginx start 
+
+
+Now create a file called mysite_nginx.conf in the /etc/nginx/sites-available/ directory, and put this in it:
+
+lin t he files
+sudo ln -s /etc/nginx/sites-available/mysite_nginx.conf /etc/nginx/sites-enabled/
+
+
+
