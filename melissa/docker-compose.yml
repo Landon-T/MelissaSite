@@ -11,11 +11,13 @@
       build: .
       
       #command: python manage.py runserver 0.0.0.0:8000
+      container_name: mel_site
       volumes:
         - .:/code
       ports:
-        - "8000:8000"
+        - "8005:80"
       # depends_on:
       #   - db
-      # volumes: 
-      #   - $PWD/www:/var/www/html
+      volumes: 
+        #mount the working directory/elisa folder as www/html
+       - $PWD/www:/var/www/html

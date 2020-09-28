@@ -30,7 +30,7 @@ DEBUG = True
 # ALLOWED_HOSTS = [ 'example.com', '203.0.113.5']
 # To respond to 'example.com' and any subdomains, start the domain with a dot
 # ALLOWED_HOSTS = ['.example.com', '203.0.113.5']
-ALLOWED_HOSTS = ['0.0.0.0', '50.99.245.12']
+ALLOWED_HOSTS = ['0.0.0.0', '50.99.245.12', '172.20.0.2', '127.0.0.1']
 
 
 # Application definition

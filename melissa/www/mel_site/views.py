@@ -1,5 +1,8 @@
 import json
-import markdown2
+#import markdown2
+#"content": markdown2.markdown(entry, extras=["footnotes"]), 
+import markdown
+md = markdown.Markdown()
 import random
 from django.shortcuts import render
 from django import forms
@@ -28,7 +31,7 @@ def speak(request):
     entry = util.get_entry("Speaking & Events")
     if entry != None:
         return render(request, 'mel_site/speak_events.html', {
-            "content": markdown2.markdown(entry, extras=["footnotes"]), 
+            "content": md.convert(entry), 
             "title": "Speaking & Events"
         })
     return render(request, 'mel_site/speak_events.html')
@@ -37,7 +40,7 @@ def involved(request):
     entry = util.get_entry("Get Involved")
     if entry != None:
         return render(request, 'mel_site/get_involved.html', {
-            "content": markdown2.markdown(entry, extras=["footnotes"]), 
+            "content": md.convert(entry),
             "title": "Get Involved"
         })
     return render(request, 'mel_site/get_involved.html')
