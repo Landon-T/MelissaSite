@@ -1,16 +1,40 @@
 https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html
 
-gunicorn melissa.wsgi
-
+https://medium.com/faun/deploy-flask-app-with-nginx-using-gunicorn-7fda4f50066a
 
 sudo apt-get install nginx
 sudo /etc/init.d/nginx start 
 
 
-Now create a file called mysite_nginx.conf in the /etc/nginx/sites-available/ directory, and put this in it:
+#1
 
-lin t he files
-sudo ln -s /etc/nginx/sites-available/mysite_nginx.conf /etc/nginx/sites-enabled/
+gunicorn melissa.wsgi
+
+#2 copy the nginx config file to the correct location
+
+sudo cp ~/Documents/Dev/MelissaSite/melissa/mel_site.conf /etc/nginx/sites-available/
+
+#3 link the files
+
+sudo ln -s /etc/nginx/sites-available/mel_site.conf /etc/nginx/sites-enabled/
+
+
+#4 allow firewall access
+sudo ufw allow 'Nginx Full'
+
+#5 test nginx
+sudo nginx -t   
+
+#6
+sudo /etc/init.d/nginx start
+
+
+
+
+
+
+
+
 
 
 

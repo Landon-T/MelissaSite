@@ -25,7 +25,7 @@ SECRET_KEY = 'dno4_e52rw#lrmbm+n(pplgr=%%jvlmz7h)@h(j&b327)4q$pt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.1.73']
 
 
 # Application definition
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'melissa.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
 
@@ -119,3 +119,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '/var/www/mel_site/static/'
