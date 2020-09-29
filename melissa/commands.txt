@@ -28,6 +28,19 @@ sudo nginx -t
 #6
 sudo /etc/init.d/nginx start
 
+#7 create static files folder 
+
+python3 manage.py collectstatic
+
+you may need to change file permissions to do this
+
+$ sudo chown -R myuser:myuser /var/www/app_name/static
+$ python manage.py collectstatic
+$ sudo chown -R root:root /var/www/app_name/static
+
+
+
+
 
 
 
