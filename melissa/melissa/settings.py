@@ -25,8 +25,7 @@ SECRET_KEY = 'dno4_e52rw#lrmbm+n(pplgr=%%jvlmz7h)@h(j&b327)4q$pt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.73']
-
+ALLOWED_HOSTS = ['192.168.1.73', '127.0.0.1']
 
 # Application definition
 

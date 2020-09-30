@@ -4,10 +4,16 @@
 {% block body %}
 
 
-<div class="title">
 
-    <h1 class="display-1">SPEAKING & EVENTS</h1>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-2">SPEAKING & EVENTS</h1>
+      <p class="lead">Get information on speaking and events</p>
+      
+    </div>
 </div>
+
+
 
 <div class="container">
     {{content | safe}}
@@ -17,5 +23,8 @@
 {% endblock %}
 
 {% block script %}
+
 <link href="{% static 'mel_site/meet_styles.css' %}" rel="stylesheet">
+<link href="{% static 'mel_site/speak-and-events.css' %}" rel="stylesheet">
+
 {% endblock %}
