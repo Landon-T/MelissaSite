@@ -1,1 +1,26 @@
 
+ body{
+    font-family: 'Libre Franklin', sans-serif;
+    
+  }
+  .body{
+    margin-bottom: 5vh;
+  }
+  
+
+  .lead1{
+    
+    font-size: calc(10px + 1vw);
+    margin-top:-10px;
+  }
+  .title{
+    font-size: calc(36px + 2vw);
+  }
+
+  .edit{
+      margin-top: 100px;
+  }
+
+  .padding{
+    padding: 20px;
+  }
