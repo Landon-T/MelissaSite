@@ -8,3 +8,11 @@ class Posts(models.Model):
 
     def __str__(self):
         return f"{self.title}"
+
+
+class Sponsors(models.Model):
+    name= models.CharField(max_length=500)
+    image = models.ImageField(upload_to='logos', default='null')
+
+    def __str__(self):
+        return self.name

@@ -10,6 +10,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
 
 from . import util
+from .models import Sponsors
 
 
 class NewPostForm(forms.Form):
@@ -18,7 +19,9 @@ class NewPostForm(forms.Form):
 
 # Create your views here.
 def index(request):
-    return render(request, 'mel_site/index.html')
+    return render(request, 'mel_site/home.html',{
+        'sponsors': Sponsors.objects.all()
+    })
 
 
 def meet(request):

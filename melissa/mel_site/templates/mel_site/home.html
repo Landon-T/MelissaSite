@@ -1,0 +1,118 @@
+{%  extends "mel_site/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="text-center col-md-7 p-lg-5 mx-auto my-5">
+    <h1 class="title">MELISSA |<i>LOTHOLZ</i> </h1>
+    <h6 class="lead1 ">SLEIGH <i>all</i> DAY</h6>  
+  </div>
+</div>
+
+<div id="bio-summary" class="container space text-center">
+
+  <h3>Team Canada bobsleigh athlete Melissa Lotholz </h3>
+  <p>Choosing challenge. Chasing better. Daring to be and do more. In sport, in life & for my community</p>
+  <div class="card-deck">
+    <div class="card bg-light award-item">
+      <div class="card-body text-center">
+        <h4 class="card-title">OLYMPICS</h4>
+        <h3 class="card-text display-4">1</h3>
+      </div>
+    </div>
+    <div class="card bg-light award-item">
+      <div class="card-body text-center">
+        <h4 class="card-title">CRSYTAL GLOBES</h4>
+        <h3 class="card-text display-4">4</h3>
+      </div>
+    </div>
+    <div class="card bg-light award-item">
+      <div class="card-body text-center">
+        <h4 class="card-title">WORLD CHAMPS MEDALS</h4>
+        <h3 class="card-text display-4">2</h3>
+      </div>
+    </div>
+    <div class="card bg-light award-item">
+      <div class="card-body text-center">
+        <h4 class="card-title">WORLD CUP MEDALS</h4>
+        <h3 class="card-text display-4">17</h3>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="jumbotron-meet jumbotron-fluid">
+  <div class="text-center col-md-7 p-lg-5 mx-auto my-5">
+    <h1 class="title">From farm to podium</h1>
+    <div class="padding">
+      <button type="button" class="btn btn-light">Meet Melissa</button>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="social-banner" class="text-center">
+  <h2 class="display-4">
+    <p>Lets Get Social!</p>
+    <a href="https://www.facebook.com/mellotholz" target="_blank"><i class="fab fa-facebook-square"></i></a>
+    <a href="https://www.instagram.com/mellotholz/?igshid=195jyjscp0t7" target="_blank"><i class="fab fa-instagram"></i></a>
+  </h2>
+</div>
+
+<div id="social-posts" class="container">
+  <script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
+  <link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
+  <ul class="juicer-feed" data-feed-id="landonthighs" data-per="6"></ul>
+</div>
+
+
+
+<div class="jumbotron-join jumbotron-fluid">
+  <div class="text-center col-md-7 p-lg-5 mx-auto my-5">
+    <h1 class="title">THE #SLEIGHALLDAY MOVEMENT</h1>
+    <h6 class="lead1 ">Become part of the community and stay 
+      up to date on events and result via our E-letter.
+    </h6>
+    <div class="padding">
+      <button type="button" class="btn btn-light">NEWSLETTER SIGN-UP</button>
+    </div>
+      
+  </div>
+</div>
+
+<div id="sponsors" class="container space text-center">
+  <h2>IT TAKES A TEAM </h2>
+  <p>
+    I would like to extend a big THANK YOU to all my sponsors & supporters for making this season possible!
+  </p>
+  <div class="d-flex justify-content-center">
+  
+
+    {% for sponsor in sponsors %}
+    <div class="card bg-light award-item">
+      <div class="card-body text-center">
+        <h4 class="card-title">{{sponsor.name}}</h4>
+        <img src="{{ sponsor.image.url }}"
+          alt="{{sponsor.name}} Logo"> 
+      </div>
+    </div>
+    {% endfor %}
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
+
+{% block script %}
+<link href="{% static 'mel_site/home_styles.css' %}" rel="stylesheet">
+{% endblock %}

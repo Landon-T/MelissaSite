@@ -1,4 +1,63 @@
 
+.jumbotron{
+    text-align: center;
+    margin:0px 0px 75px 0px;
+    padding-top: 40vh;
+    
+    background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.55), 
+        rgba(0, 0, 0, 0.55)
+      ),
+      url('/static/mel_site/home_background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color:rgb(230, 230, 230) !important;
+    height: 90vh;
+  }
+  .jumbotron-meet{
+    text-align: center;
+    margin:0px 0px 75px 0px;
+    padding-top: 30vh;
+    
+    background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.55), 
+        rgba(0, 0, 0, 0.55)
+      ),
+      url('/static/mel_site/farm.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color:rgb(230, 230, 230) !important;
+    height: 90vh;
+  }
+
+  .jumbotron-join{
+    text-align: center;
+    margin:0px 0px 75px 0px;
+    padding-top: 30vh;
+    
+    background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.55), 
+        rgba(0, 0, 0, 0.55)
+      ),
+      url('/static/mel_site/join.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color:rgb(230, 230, 230) !important;
+    height: 90vh;
+  }
+
+
+
+
 .flex-center{
     display: flex;
     justify-content: center;
@@ -31,6 +90,7 @@ a.carousel-control-prev:hover{
 
 .space{
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 
@@ -61,6 +121,12 @@ html, body{
     margin: auto;
 
     
+
+}
+
+.card-body img{
+    max-width:500px;
+    width: 20vw;
 
 }
 
