@@ -1,0 +1,51 @@
+{%  extends "mel_site/adminLayout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="container text-center">
+
+
+    <h1 class="m-3">Sponsor Logos</h1>
+
+    <div class="d-flex justify-content-center">
+        {% for sponsor in logos %}
+        <div class="m-2 p-1 card" style="width:400px">
+            
+            <img class="card-img-top" src="{{ sponsor.image.url }}" alt="{{sponsor.name}} Logo"> 
+            <div class="card-body">
+            <h4 class="card-title">{{sponsor.name}}</h4>
+            <p class="card-text">{{ sponsor.image.url }}</p>
+            
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <h1 class="m-3">Uploaded Images</h1>
+
+    <div class="d-flex justify-content-center">
+        {% for sponsor in images %}
+        <div class="m-2 p-1 card" style="width:400px">
+            
+            <img class="card-img-top" src="{{ sponsor.image.url }}" alt="{{sponsor.name}} Logo"> 
+            <div class="card-body">
+            <h4 class="card-title">{{sponsor.name}}</h4>
+            <p class="card-text">{{ sponsor.image.url }}</p>
+            
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+
+
+
+{% endblock %}
+
+{% block script %}
+<link href="{% static 'mel_site/home_styles.css' %}" rel="stylesheet">
+
+{% endblock %}

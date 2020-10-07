@@ -1,52 +1,60 @@
-{%  extends "mel_site/layout.html" %}
+{%  extends "mel_site/adminLayout.html" %}
 {% load static %}
 
 {% block body %}
 
 
 
-
-
-<div class="container text-center edit">
     
 
 
-    {% for page in pages %}
-    <li><a href="{% url 'edit' page %}">{{page}}</a> </li>
-    {% endfor %}
-    
-    
-    {% if title != None %}
-    <h1>Edit {{title}}</h1>
-    {% else %}
-    <h1>Edit Section</h1>
-    {% endif %}
+        {% if title != None %}
+        <h1>Edit {{title}}</h1>
+        <form action="{% url 'create' %}" method="post">
+            {% csrf_token %}
+            <div class="flex-item" hidden>
+                <div>{{form.title.label_tag}}</div>
+                <div>{{form.title}}</textarea></div>
+                {{form.title.errors}}
+            </div>
+            <div class="flex-item">
+                <div>{{form.body.label_tag}}</div>
+                <div>{{form.body}}</textarea></div>
+                {{form.body.errors}}
+            </div>
+        
+            <input  type="submit" value="Save Section">
+            
+        
+        
+        </form>
+        {% else %}
+        <h1>Select a Section</h1>
 
+        {% endif %}
+
+        {% if messages %}
     
 
+            {% for message in messages %}
 
-    
+            {% if message.tags %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {% else %}
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+            {% endif %}
 
-    
-    <form action="{% url 'create' %}" method="post">
-        {% csrf_token %}
-        <div class="flex-item">
-            <div>{{form.title.label_tag}}</div>
-            <div>{{form.title}}</textarea></div>
-            {{form.title.errors}}
-        </div>
-        <div class="flex-item">
-            <div>{{form.body.label_tag}}</div>
-            <div>{{form.body}}</textarea></div>
-            {{form.body.errors}}
-        </div>
-    
-        <input  type="submit" value="Create Section">
-       
-    
-    
-    </form>
-</div>
+                {{ message }}
+                
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endfor %}
+        {% endif %}
+
+
+
 
 
 

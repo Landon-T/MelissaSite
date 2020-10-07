@@ -11,7 +11,7 @@
       up to date on events and result via our E-letter.
     </h6>
     <div class="padding">
-      <button type="button" class="btn btn-light">NEWSLETTER SIGN-UP</button>
+      <button type="button" class="btn btn-light" data-toggle="modal" data-target="#SignUpModal">NEWSLETTER SIGN-UP</button>
     </div>
     <div class="padding">
       <button type="button" class="btn btn-light">DONATE</button>
@@ -22,10 +22,38 @@
 </div>
 
 
+<!-- Modal -->
+<div class="modal fade" id="SignUpModal" tabindex="-1" role="dialog" aria-labelledby="SignUpModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="SignUpModalLabel">Newsletter Sign-Up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div id="mc_embed_signup">
+              <form action="https://gmail.us20.list-manage.com/subscribe/post?u=96011a2266376d2523203661f&amp;id=a5188df2ab" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll">
+                  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_96011a2266376d2523203661f_a5188df2ab" tabindex="-1" value=""></div>
+                  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                  </div>
+              </form>
+              </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
 
 <div class="container text-center">
     {{content | safe}}
-    {{content.title}}
+    
 </div>
     
 

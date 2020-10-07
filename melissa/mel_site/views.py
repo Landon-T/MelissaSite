@@ -8,19 +8,29 @@ from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
+from django.contrib import messages
+
+
 
 from . import util
-from .models import Sponsors
+from .models import Images
 
 
 class NewPostForm(forms.Form):
     title = forms.CharField(label="Title")
-    body = forms.CharField(widget=forms.Textarea(attrs={"rows":25, "cols":100}))
+    body = forms.CharField(widget=forms.Textarea())
+
+class ImageForm(forms.Form):
+    name= forms.CharField(max_length=500)
+    image = forms.ImageField()
+    category = forms.CharField( widget=forms.Select(choices=Images.TYPES))
+
+
 
 # Create your views here.
 def index(request):
     return render(request, 'mel_site/home.html',{
-        'sponsors': Sponsors.objects.all()
+        'sponsors': Images.objects.filter(category='LOGO')
     })
 
 
@@ -61,7 +71,15 @@ def create(request):
                 util.save_entry(form.cleaned_data["title"], form.cleaned_data["body"])
                 #return HttpResponseRedirect(reverse("wiki", args=[form.cleaned_data["title"]]))
                 #return somthing new here
+                messages.success(request, 'Updated Successfully')
+                return render(request, "mel_site/create.html",{
+                    "form": form,
+                    "pages": pages,
+                    "title": form.cleaned_data["title"]
+                })
+
             else:
+                messages.danger(request, 'Error')
                 # return the filled form if there is an error
                 return render(request, "mel_site/create.html",{
                     "form": form,
@@ -72,6 +90,58 @@ def create(request):
             "form": NewPostForm(),
             "pages": pages,
             "title": None
+        })
+    
+    else:
+        #ask user to login
+        return render(request, "mel_site/login.html")
+
+def view_pictures(request):
+    if request.user.is_authenticated:
+
+        return render(request, 'mel_site/picture_view.html',{
+            "pages": util.list_entries,
+            'logos': Images.objects.filter(category='LOGO'),
+            'images': Images.objects.filter(category='IMAGE')
+        })
+        
+    else:
+        #ask user to login
+        return render(request, "mel_site/login.html")
+
+def upload(request):
+    if request.user.is_authenticated:
+    # Do something for authenticated users.
+        pages = util.list_entries
+        if request.method == "POST":
+            form = ImageForm(request.POST, request.FILES)
+            if form.is_valid():
+                data = form.cleaned_data
+                i = Images(
+                    name=data['name'],
+                    image = data['image'],
+                    category = data['category']
+                )
+                i.save()
+
+
+                #return somthing new here
+                messages.success(request, 'Updated Successfully')
+                return render(request, "mel_site/upload.html",{
+                    "form": form,
+                    "pages": pages
+                })
+
+            else:
+                messages.success(request, 'Error')
+                # return the filled form if there is an error
+                return render(request, "mel_site/upload.html",{
+                    "form": form,
+                    "pages": pages
+                })
+        return render(request, "mel_site/upload.html",{
+            "form": ImageForm(),
+            "pages": pages
         })
     
     else:

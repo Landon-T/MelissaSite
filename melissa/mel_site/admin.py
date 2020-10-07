@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import Posts, Sponsors
+from .models import Posts, Images
 
 # Register your models here.
 admin.site.register(Posts)
-admin.site.register(Sponsors)
+admin.site.register(Images)

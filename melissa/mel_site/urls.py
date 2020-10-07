@@ -11,7 +11,9 @@ urlpatterns = [
     path("speak", views.speak, name="speak"),
     path("involved", views.involved, name="involved"),
     path("store", views.store, name="store"),
-    path("create",views.create, name="create"),
+    path("edit",views.create, name="create"),
+    path("edit/upload",views.upload, name="upload"),
+    path("edit/view",views.view_pictures, name="view"),
     path("edit/<str:title>",views.edit, name="edit")
 
 ]
