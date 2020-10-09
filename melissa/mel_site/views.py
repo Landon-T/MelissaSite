@@ -35,6 +35,12 @@ def index(request):
 
 
 def meet(request):
+    entry = util.get_entry("Meet Melissa")
+    if entry != None:
+        return render(request, 'mel_site/meet_mel.html', {
+            "content": markdown2.markdown(entry, extras=["footnotes"]), 
+            "title": "Meet Melissa"
+        })
     return render(request, 'mel_site/meet_mel.html')
 
 def speak(request):

@@ -9,7 +9,7 @@
         rgba(0, 0, 0, 0.55), 
         rgba(0, 0, 0, 0.55)
       ),
-      url('/static/mel_site/home_background.jpg');
+      url('/static/mel_site/pictures/home_background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -27,7 +27,7 @@
         rgba(0, 0, 0, 0.55), 
         rgba(0, 0, 0, 0.55)
       ),
-      url('/static/mel_site/farm.jpeg');
+      url('/static/mel_site/pictures/farm.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -46,7 +46,7 @@
         rgba(0, 0, 0, 0.55), 
         rgba(0, 0, 0, 0.55)
       ),
-      url('/static/mel_site/join.jpg');
+      url('/static/mel_site/pictures/join.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

@@ -3,83 +3,35 @@
 
 {% block body %}
 
-<div class="title">
 
-  <h1 class="display-1">MEET MELISSA</h1>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="text-center col-md-7 p-lg-5 mx-auto my-5">
+    <h1 class="title">MEET MELISSA</h1>
+    <h6 class="lead1 ">
+      Pushing a sled has pushed me as a person. 
+      I have grown deeper and achieved higher than 
+      I thought possible because of this crazy sport. 
+      And, I have had the honour of inspiring and partnering with others 
+      along the way. For me, that’s true gold.
+    </h6>
+
+     
+  </div>
 </div>
 
 
-<div class="image-container card-group">
 
-  <div class="flex-card row justify-content-center">
-    <div class="col-md-3 picture rotate-left">
-      <img src="/static/mel_site/tobaggan.jpg" alt="Melissa with a tobaggan" style="width:100%">
-      <div class="caption">
-        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-      </div>
-    </div>
-  
-    <div class="col-md-8 text">
-      <h2>LIFE AS AN ADVENTURE </h2>
-      <p>
-        I see life as an adventure - like a hike that we kind of have a road map for but truth be told we are all figuring out along the way. For me, God is my adventure guide leading me, pointing out the path to take, encouraging me, challenging me and inviting me to step out and up along the way. Sometimes there are tough climbs. Sometimes we must go down before we can go up. Sometimes we get to enjoy the most wonderful and rewarding views along the way. Regardless, there is so much to take in and experience and learn along the way, and we are only better for the journey!
-      </p>
-    </div>
-  </div>
-
-  <div class="flex-card row justify-content-center">
-    <div class="col-md-8 text">
-      <h2>LIFE AS AN ADVENTURE </h2>
-      <p>
-        I see life as an adventure - like a hike that we kind of have a road map for but truth be told we are all figuring out along the way. For me, God is my adventure guide leading me, pointing out the path to take, encouraging me, challenging me and inviting me to step out and up along the way. Sometimes there are tough climbs. Sometimes we must go down before we can go up. Sometimes we get to enjoy the most wonderful and rewarding views along the way. Regardless, there is so much to take in and experience and learn along the way, and we are only better for the journey!
-      </p>
-    </div>
-
-    <div class="col-md-3 picture rotate-right">
-      <img src="/static/mel_site/tobaggan.jpg" alt="Melissa with a tobaggan" style="width:100%">
-      <div class="caption">
-        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="flex-card row justify-content-center">
-    <div class="col-md-3 picture rotate-left">
-      <img src="/static/mel_site/tobaggan.jpg" alt="Melissa with a tobaggan" style="width:100%">
-      <div class="caption">
-        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-      </div>
-    </div>
-  
-    <div class="col-md-8 text">
-      <h2>LIFE AS AN ADVENTURE </h2>
-      <p>
-        I see life as an adventure - like a hike that we kind of have a road map for but truth be told we are all figuring out along the way. For me, God is my adventure guide leading me, pointing out the path to take, encouraging me, challenging me and inviting me to step out and up along the way. Sometimes there are tough climbs. Sometimes we must go down before we can go up. Sometimes we get to enjoy the most wonderful and rewarding views along the way. Regardless, there is so much to take in and experience and learn along the way, and we are only better for the journey!
-      </p>
-    </div>
-  </div>
-
-  <div class="flex-card row justify-content-center">
-    <div class="col-md-8 text">
-      <h2>LIFE AS AN ADVENTURE </h2>
-      <p>
-        I see life as an adventure - like a hike that we kind of have a road map for but truth be told we are all figuring out along the way. For me, God is my adventure guide leading me, pointing out the path to take, encouraging me, challenging me and inviting me to step out and up along the way. Sometimes there are tough climbs. Sometimes we must go down before we can go up. Sometimes we get to enjoy the most wonderful and rewarding views along the way. Regardless, there is so much to take in and experience and learn along the way, and we are only better for the journey!
-      </p>
-    </div>
-
-    <div class="col-md-3 picture rotate-right">
-      <img src="/static/mel_site/tobaggan.jpg" alt="Melissa with a tobaggan" style="width:100%">
-      <div class="caption">
-        <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
-      </div>
-    </div>
-  </div>
-
+<div class="container">
+    {{content | safe}}
 </div>
+
 
 {% endblock %}
 
 {% block script %}
-<link href="{% static 'mel_site/meet_styles.css' %}" rel="stylesheet">
+
+<link href="{% static 'mel_site/styles/meet_styles.css' %}" rel="stylesheet">
+
+
 {% endblock %}

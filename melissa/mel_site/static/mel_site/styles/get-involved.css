@@ -1,9 +1,3 @@
- 
- 
- 
-
- 
- 
  /* Parallax base styles
   --------------------------------------------- */
 
@@ -16,7 +10,7 @@
         rgba(0, 0, 0, 0.55), 
         rgba(0, 0, 0, 0.55)
       ),
-      url('/static/mel_site/hear_story.jpg');
+      url('/static/mel_site/pictures/home_background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -24,8 +18,5 @@
     color:rgb(230, 230, 230) !important;
     height: 90vh;
   }
-  
-
-
 
 

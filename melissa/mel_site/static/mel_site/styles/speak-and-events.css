@@ -1,0 +1,31 @@
+ 
+ 
+ 
+
+ 
+ 
+ /* Parallax base styles
+  --------------------------------------------- */
+
+  .jumbotron{
+    text-align: center;
+    margin:0px 0px 75px 0px;
+    
+    background: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.55), 
+        rgba(0, 0, 0, 0.55)
+      ),
+      url('/static/mel_site/pictures/hear_story.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color:rgb(230, 230, 230) !important;
+    height: 90vh;
+  }
+  
+
+
+
+

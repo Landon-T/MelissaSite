@@ -1,0 +1,77 @@
+
+body{
+  font-family: 'Libre Franklin', sans-serif;
+  
+}
+.body{
+  margin-bottom: 5vh;
+  margin-top: 75px;
+}
+
+
+.lead1{
+  
+  font-size: calc(10px + 1vw);
+  margin-top:-10px;
+}
+.title{
+  font-size: calc(36px + 2vw);
+}
+
+.edit{
+    margin-top: 100px;
+}
+
+.padding{
+  padding: 20px;
+}
+
+.title{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.image-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-card{
+  background-color: grey;
+  margin: 10px;
+  padding: 5px;
+  min-width: 250px;
+  max-width: 90vw;
+}
+
+.picture{
+  max-width: 260px;
+  height: auto;
+  margin: 25px;
+  padding: 15px;
+  background: white;
+  font-style: italic;
+  font-size: small;
+  text-align: right;
+  
+  
+}
+
+.rotate-left{
+
+  transform: rotate(-9deg);
+}
+.rotate-right{
+
+  transform: rotate(9deg);
+}
+
+.text{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+}
