@@ -1,3 +1,7 @@
+Become part of the community and stay 
+      up to date on events and result via our E-letter.
+_______
+
 # Invest
 _______
 **Give today and make a difference!**
