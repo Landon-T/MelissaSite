@@ -13,7 +13,7 @@ from django.contrib import messages
 
 
 from . import util
-from .models import Images
+from .models import Images, Sponsor
 
 
 class NewPostForm(forms.Form):
@@ -23,14 +23,14 @@ class NewPostForm(forms.Form):
 class ImageForm(forms.Form):
     name= forms.CharField(max_length=500)
     image = forms.ImageField()
-    category = forms.CharField( widget=forms.Select(choices=Images.TYPES))
+    
 
 
 
 # Create your views here.
 def index(request):
     return render(request, 'mel_site/home.html',{
-        'sponsors': Images.objects.filter(category='LOGO')
+        'sponsors': Sponsor.objects.filter(tier='TIER1')
     })
 
 
@@ -107,8 +107,10 @@ def view_pictures(request):
 
         return render(request, 'mel_site/picture_view.html',{
             "pages": util.list_entries,
-            'logos': Images.objects.filter(category='LOGO'),
-            'images': Images.objects.filter(category='IMAGE')
+            'logos1': Sponsor.objects.filter(tier='TIER1'),
+            'logos2': Sponsor.objects.filter(tier='TIER2'),
+            'logos3': Sponsor.objects.filter(tier='TIER3'),
+            'images': Images.objects.all()
         })
         
     else:
@@ -125,8 +127,7 @@ def upload(request):
                 data = form.cleaned_data
                 i = Images(
                     name=data['name'],
-                    image = data['image'],
-                    category = data['category']
+                    image = data['image']
                 )
                 i.save()
 

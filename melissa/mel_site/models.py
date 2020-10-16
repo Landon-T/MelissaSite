@@ -16,18 +16,32 @@ class Posts(models.Model):
 
 class Images(models.Model):
 
-    LOGO = 'LOGO'
-    IMAGE = 'IMAGE'
-    TYPES = (
-        (LOGO, 'Logo'),
-        (IMAGE, 'Image')
-    )
+
 
     name= models.CharField(max_length=500)
     image = models.ImageField(upload_to='pictures', default='null')
-    category = models.CharField(max_length=5, choices=TYPES, default=IMAGE)
+    
 
     def __str__(self):
         return self.name
 
 
+class Sponsor(models.Model):
+
+    TIER1 = 'TIER1'
+    TIER2 = 'TIER2'
+    TIER3 = 'TIER3'
+    
+    TIER_LIST = (
+        (TIER1, 'Tier 1'),
+        (TIER2, 'Tier 2'),
+        (TIER3, 'Tier 3')
+    )
+
+    name= models.CharField(max_length=1000)
+    image = models.ImageField(upload_to='pictures', default='null')
+    url = models.CharField(max_length=1000 )
+    tier = models.CharField(max_length=5, choices=TIER_LIST, default=TIER3)
+
+    def __str__(self):
+        return self.name
