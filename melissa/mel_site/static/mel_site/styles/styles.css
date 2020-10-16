@@ -85,3 +85,12 @@ body{
   flex-direction: column;
  
 }
+
+.form-label-group{
+  margin: 20px;
+  padding: 2px;
+}
+.form-label-group label{
+  margin: 0px;
+  padding: 2px;
+}
