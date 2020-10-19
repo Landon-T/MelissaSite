@@ -95,8 +95,27 @@ a.carousel-control-prev:hover{
 
 
 .award-item{
-    min-width: 100px;
+    min-width: 175px;
     margin: 25px;
+}
+
+.sponsor1-item{
+  width: 25vw;
+  min-width: 200px;
+  max-width: 500px;
+  margin: 25px;
+}
+.sponsor2-item{
+  width: 20vw;
+  min-width: 175px;
+  max-width: 500px;
+  margin: 25px;
+}
+.sponsor3-item{
+  width: 15vw;
+  min-width: 150px;
+  max-width: 500px;
+  margin: 25px;
 }
 
 a {
@@ -126,7 +145,7 @@ html, body{
 
 .card-body img{
     max-width:500px;
-    width: 20vw;
+    width: 100%;
 
 }
 

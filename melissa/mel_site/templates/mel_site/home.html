@@ -128,21 +128,62 @@
   <p>
     I would like to extend a big THANK YOU to all my sponsors & supporters for making this season possible!
   </p>
-  <div class="d-flex justify-content-center">
-  
 
-    {% for sponsor in sponsors %}
-    <div class="card bg-light award-item">
-      <div class="card-body text-center">
-        <h4 class="card-title">{{sponsor.name}}</h4>
-        <img src="{{ sponsor.image.url }}"
-          alt="{{sponsor.name}} Logo"> 
-      </div>
+  <h3 class="mt-5"> G0LD TIER</h3>
+  <div class="d-flex flex-wrap justify-content-center">
+  
+    {% for sponsor in sponsors1 %}
+    <div class="card bg-light sponsor1-item">
+      <a target="_blank" href="{{ sponsor.url }}">
+        <div class="card-body text-center">
+          <h4 class="card-title">{{sponsor.name}}</h4>
+          <img src="{{ sponsor.image.url }}"
+            alt="{{sponsor.name}} Logo"> 
+        </div>
+      </a>
+
     </div>
     {% endfor %}
 
+  </div>
+
+  <h3 class="mt-5"> SILVER TIER</h3>
+  <div class="d-flex flex-wrap justify-content-center">
+  
+    {% for sponsor in sponsors2 %}
+    <div  class="card bg-light sponsor2-item">
+      <a target="_blank" href="{{ sponsor.url }}">
+        <div class="card-body text-center">
+          <h4 class="card-title">{{sponsor.name}}</h4>
+          <img src="{{ sponsor.image.url }}"
+            alt="{{sponsor.name}} Logo"> 
+        </div>
+      </a>
+
+    </div>
+    {% endfor %}
 
   </div>
+
+  <h3 class="mt-5"> BRONZE TIER</h3>
+  <div class="d-flex flex-wrap justify-content-center">
+  
+    {% for sponsor in sponsors3 %}
+    <div   class="card bg-light sponsor3-item">
+      <a target="_blank" href="{{ sponsor.url }}">
+        <div class="card-body text-center">
+          <h4 class="card-title">{{sponsor.name}}</h4>
+          <img src="{{ sponsor.image.url }}"
+            alt="{{sponsor.name}} Logo"> 
+        </div>
+      </a>
+
+    </div>
+    {% endfor %}
+
+  </div>
+
+
 </div>
 
 

@@ -30,7 +30,9 @@ class ImageForm(forms.Form):
 # Create your views here.
 def index(request):
     return render(request, 'mel_site/home.html',{
-        'sponsors': Sponsor.objects.filter(tier='TIER1')
+        'sponsors1': Sponsor.objects.filter(tier='TIER1'),
+        'sponsors2': Sponsor.objects.filter(tier='TIER2'),
+        'sponsors3': Sponsor.objects.filter(tier='TIER3')
     })
 
 

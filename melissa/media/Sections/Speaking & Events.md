@@ -34,6 +34,3 @@ _______
 
  If you can't decide, do both! In addition to presenting, enjoy the unique opportunity to connect in a more personal setting, where I can follow up and meet individuals in small groups. This time could include follow up challenges, additional questions and discussion, or an activity session such as joining in on gym class at schools and sharing some bobsleigh training drills!  
 _____
-![Melissa](/media/pictures/3-3_WECA_ref.png)
-#### *Melissa is gifted at sharing her story ..She is sincere, humorous, and I couldn’t stop taking notes as she shared so much wisdom. Women were talking after the event about how Melissa inspired them and they were so proud to have a local girl achieve so much for Canada and women! Thank you.*  
-*Janelle Given, West Edmonton Christian Assembly*
