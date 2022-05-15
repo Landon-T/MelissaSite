@@ -1,4 +1,4 @@
 # MelissaSite
 A  website for Melissa
 
-Currently waiting for domain name to be figured out but site can be accessed at http://35.222.8.81/
+Project fell through and is currently not hosted anywhere. Implemented a simple CMS through django runnning nginx. Site would hvae pulled relevant post from social's and provided and email sign up link through MailChimp. Created a simple Blog post area for melissa to make some updates.
